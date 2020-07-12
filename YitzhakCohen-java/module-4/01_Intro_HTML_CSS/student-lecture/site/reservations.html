@@ -1,0 +1,54 @@
+<!DOCTYPE html>  <!-- DOCTYPE tells this file contains HTML - optional -->
+<html lang="en"> <!-- Container for all the HTML in the file - required -->
+<head>  <!-- Contains information the browser and CSS may need to know about this html -->
+    <meta charset="UTF-8">  <!-- meta tag is info for the browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Code - Day 1</title> <!-- Words displayed in the tab for this page in the browser-->
+    <link rel="stylesheet" href="styles.css">  <!-- link specifies external components to use in this html-->
+</head>
+    <body>  <!-- The primary content of the webpage -->
+        <h1>Bits & Bytes</h1>
+        <p>Welcome to the internet's best restaurant </p>
+        <nav>
+            <a href="index.html">View Menu</a>
+        </nav>
+        <main>
+            <h2>Reservation Form</h2>
+            <!-- Define a form to collect user input that will issue an http Post to the URL we specified in action -->
+            <!-- The URL we are using is a dummy api that will accept reservations from our form -->
+            <!-- Frank set up the dummy URL so we would have a more real world feel to this example -->
+            <!-- We are doing a POST because if this were real, we would be adding a reservation to the data resource -->
+            <form method="POST" action="https://5f02f3429e41230016d43346.mockapi.io/api/reservations">
+                <!-- The input tag defines an input field, type= is the type of input desired-->
+                <!-- id= the variable name programs and other components will use to access the user input -->
+                <!-- The label tag associates a descriptive phrase with the input control on the screen -->
+                <!-- The for= in the label identifies which input field the label is associated with -->
+                <div> <!-- The div gives us a "style-able unit" within the html -->
+                    <label for="reservationName">Name</label>
+                    <input type="text" id="reservationName">
+                </div>
+                <div>
+                    <label for="numberOfGuests">Number Of Guests</label>
+                    <input type="number" id="numberOfGuests">
+                </div>   
+                <div>
+                    <label for="reservationDate">Date</label>
+                    <input type="date" id="reservationDate">
+                </div>  
+                <div>
+                    <label for="reservationTime">Time</label>
+                    <input type="time" id="reservationTime">
+                </div>  
+                <div>
+                    <label for="specialOccasion">Special Occasion</label>
+                    <input type="checkbox" id="specialOccasion">
+                </div> 
+                <!-- We need to define a submit button to have the user input sent to the API -->
+                <!-- using the http request and url in the form tag --> 
+                <div>
+                    <input type="submit"/>
+                </div>
+            </form>
+        </main>
+    </body> 
+</html>    

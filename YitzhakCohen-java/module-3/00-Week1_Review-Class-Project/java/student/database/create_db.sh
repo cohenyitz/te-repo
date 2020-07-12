@@ -1,0 +1,9 @@
+#!/bin/bash
+BASEDIR=$(dirname $0)
+DATABASE=catcards
+psql -U postgres -f "$BASEDIR/dropdb.sql" &&
+createdb -U postgres $DATABASE &&
+psql -U postgres -d $DATABASE -f "$BASEDIR/schema.sql" &&
+psql -U postgres -d $DATABASE -f "$BASEDIR/user.sql"  &&
+psql -U postgres -d $DATABASE -f "$BASEDIR/somecatdata.sql" &&
+psql -U postgres -d $DATABASE -f "$BASEDIR/listcatcards.sql"

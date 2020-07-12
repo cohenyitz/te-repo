@@ -1,0 +1,46 @@
+.container {   /* Style the elements in the class="container" */
+    display:grid;  /* Use the grid layout */
+    grid-template-columns: 200px 1fr 200px; /* 3 columns - 1st and 3rd are 200px and 2nd whatever is left on the screen*/
+    grid-template-areas: 
+    "header    header  header "          /* 1st row format - assign the name header to all the columns */
+    "menu-nav  main    upcoming-events"  /* 2nd row format - assign names to each column              */
+    "footer    footer  footer"           /* 3rd row format - assign the name footer to all 3 columns  */
+    ;
+    height: 100vh;     /* set the height of the container to 100% of the view height (browser window) */
+    grid-gap: 10px;    /* even sized gap between rows and columns                                     */
+}
+header {               /* Style the header tag and it's elements  */
+    grid-area: header; /* place it in the grid area called header */
+}
+nav#menu-nav {           /* Style the element in nav with id="nav-menu" */
+    grid-area: menu-nav; /* place it in the grid-area called menu-nav   */
+}
+main {                   /* Style the main tag and it's elements */
+    grid-area: main;     /* place in the grid area called main   */
+}
+aside {                         /* Style the aside tag and it's elements         */
+    grid-area: upcoming-events; /* place in the grid area called upcoming events */
+}
+footer {                  /* Style the footer tag and it's elements */
+    grid-area: footer;    /* place in the grid area called footer   */
+}
+@media (max-width: 768px) { /* Change the style when the screen width is 768px or less */
+    .container { /* for anything in elements with the class="container" */
+        grid-template-areas :  /* stack the grid areas instead of going across screen */
+        "header"
+        "menu-nav"
+        "main"
+        "upcoming-events"
+        "footer"
+        ;
+        grid-template-columns: 1fr;  /* change the grid to one column */
+    }
+@media (max-width: 500px) {  /* Change the style when the screen width is 500px or less */
+    header {
+        padding: 0px 5px;
+    }
+    div.food {
+        max-width: 75%;
+    }
+}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>  <!-- DOCTYPE tells this file contains HTML - optional -->
+<html lang="en"> <!-- Container for all the HTML in the file - required -->
+<head>  <!-- Contains information the browser and CSS may need to know about this html -->
+    <meta charset="UTF-8">  <!-- meta tag is info for the browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Code - Day 1</title> <!-- Words displayed in the tab for this page in the browser-->
+    <link rel="stylesheet" href="styles.css">  <!-- link specifies external components to use in this html-->
+    
+</head>
+    
+    <body>  <!-- The primary content of the webpage -->
+        <h1>Bits & Bytes</h1>
+        <p>Welcome to the internet's best restaurant </p>
+        <nav> <!-- Identifies the places you can go from this page -->
+            <!-- The anchor tag (a) gives you a place to specify a link to another page -->
+            <!-- the href= attribute is the target of where to go (usually html) -->
+          <a href="reservations.html">Make A Reservations</a>
+        </nav>
+        <main>  <!-- Documents the main part of the page - no impact on presentation -->
+            <h2>Menu</h2>
+            <section>
+                <h3>Lunch</h3>
+                <p>Full Stack Sandwich</p>
+                <!-- img tag is how you specify an image - code path in src = attribute -->
+                <!-- the path specified for src = in this example is relative to project folder (site)-->
+                <img src="images/menu/lunch/full-stack-sandwich.png" alt="Full Stack Sandwich Image">
+                <p>Universal Serial Burger</p>
+                <img src="images/menu/lunch/USBurger.png" alt="Universal Serial Burger Image">
+            </section>
+            <section>
+                <h3>Dinner</h3>
+                <p>Rack Of Ram</p>
+                <img src="images/menu/dinner/rack-of-ram.png" alt="Rack Of Ram Image">
+                <p>Vegetable Array</p>
+                <img src="images/menu/dinner/array-of-vegetables.png" alt="Vegetable Array Image">
+            </section>
+            
+        </main>
+    </body>
+
+</html> <!-- End of HTML in the file -->

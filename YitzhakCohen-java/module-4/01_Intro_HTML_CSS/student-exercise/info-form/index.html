@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link rel="stylesheet" href="info-form-styles.css">
+</head>
+<body>
+   <h2>Information Form</h2>
+    <form action="https://5f02f3429e41230016d43346.mockapi.io/api/reservations" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <label for="emailAddress">Email</label>
+            <input type="email" name="emailAddress" id="emailAddress" required>
+        </div>
+        <div>
+            <label for="dateOfBirth">Date Of Birth</label>
+            <input type="date" name="dateOfBirth" id="dateOfBirth">
+        </div>
+        <div>
+            <label for="favoriteColor">Favorite Color</label>
+            <input type="color" name="favoriteColor" id="favoriteColor">
+        </div>
+        <div>
+            <label for="favoriteNumber">Favorite Number</label>
+            <input type="number" name="favoriteNumber" id="favoriteNumber">
+        </div>
+        <div>
+            <label for="confirmationOfData">Confirm Data Is Correct</label>
+            <input type="checkbox" name="confirmationOfData" id="confirmationOfData">
+        </div>
+        <div>
+            <input type="submit">
+        </div>    
+    </form>
+</body>
+</html>

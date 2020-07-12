@@ -1,0 +1,46 @@
+.container {    /* Style the elements in the class="container" */
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /*  3 columns - 1st and 3rd is 200px and 2nd whatever is left*/
+    grid-template-areas: 
+    "header    header  header" /* 1st row format - assign the name header to all columns   */
+    "menu-nav  main    upcoming-events" /* 2nd row format - assign names to each column    */
+    "footer    footer  footer" /* 3rd row format - assign the name footer to all 3 columns */
+    ;
+    height: 100vh;  /* Set the height of the container to be 100% of the view height (browser window)*/
+    grid-gap: 10px; /* Even sized gap between the rows and columns */
+}
+header {               /* Style the header tag and its elements */
+    grid-area: header; /* place it in the grid area called header */
+}
+nav #menu-nav{         /* Style the element in nav with id="menu-nav"*/
+    grid-area: menu-nav;/* place in the grid area called menu-nav */
+}
+main{
+    grid-area: main;
+}
+aside {
+    grid-area: upcoming-events;
+}
+footer{
+    grid-area: footer;
+}
+@media (max-width: 768px) { /* change the style when the csreen width is 768px or less */
+    .container {    /* for anything in elements with the class="container" */
+        grid-template-areas: /* stack the grid areas instead */
+        "header"
+        "menu-nav"
+        "main"
+        "upcoming-events"
+        "footer"                      
+        ;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 500px) {
+    header{
+        padding: 0px 5px;
+    }
+    div.food {
+        max-width: 75%;
+    }
+}

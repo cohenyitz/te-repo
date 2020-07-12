@@ -1,0 +1,6 @@
+.bio {
+    display: flex;
+}
+.bio:nth-child(odd) {
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,9 @@
+header , 
+header > nav > ul,
+header > div > img
+{
+    display: flex;   
+}
+.spacer { 
+    flex-basis: 50%;
+}

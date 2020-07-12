@@ -1,0 +1,41 @@
+body,
+#hero footer,
+#featured section,
+#featured section article div, 
+#all-items section,
+#all-items section article {
+    display : flex;
+}
+body,
+#all-items {
+    flex-direction: column;
+}
+body {
+    align-items: center;
+}
+#featured section article div {
+    justify-content: center;
+}
+#hero footer, 
+#all-items section article {
+        align-items: center;
+}
+#hero footer {
+    justify-content: space-between;
+}
+
+#all-items article:nth-child(even) div:first-child {
+    order: 2;
+}
+#all-items article:nth-child(even) {
+   flex-direction: reverse;
+   justify-content: space-between;
+}
+#all-items section {
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+    #featured section {
+        flex-wrap: wrap;
+    }
+}
