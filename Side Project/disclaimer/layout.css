@@ -1,0 +1,24 @@
+body{
+    display: grid;
+    grid-template-columns:  2fr 2fr ;
+    grid-template-areas: 
+                        "header     header  "
+                        "first-half second-half"
+    ;
+    grid-gap: 5px;
+}
+header {
+    grid-area: header;
+}
+main #first-half {
+    grid-area: first-half;
+}
+main #second-half {
+    grid-area: second-half;
+}
+header {
+    align-items: flex-end;
+}
+main #first-half {
+    display: flex;
+}
