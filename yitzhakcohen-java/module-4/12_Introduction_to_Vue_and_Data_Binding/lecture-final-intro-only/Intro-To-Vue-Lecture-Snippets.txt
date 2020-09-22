@@ -1,0 +1,123 @@
+	// Reviews data
+        reviews: [
+            {
+                reviewer: "Malcolm Gladwell",
+                title: 'What a book!',
+                review: "It certainly is a book. I mean, I can see that. Pages kept together with glue and there's writing on it, in some language.",
+                rating: 3,
+		favorite: false
+            },
+            {
+                reviewer: "Craig Castelaz",
+                title: 'Better than a swift kick in the butt!',
+                review: "My bar is low.",
+                rating: 4,
+		favorite: false
+            }
+        ]
+
+
+
+*******************************************************************
+CSS
+*******************************************************************
+div.main {
+  margin: 1rem 0;
+}
+
+div.main div.well-display {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.main div.well-display div.well {
+    display: inline-block;
+    width: 15%;
+    border: 1px black solid;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+div.main div.well-display div.well span.amount {
+    color: darkslategray;
+    display: block;
+    font-size: 2.5rem;
+}
+
+div.main div.review {
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 10px;
+}
+
+div.main div.review div.rating {
+    height: 2rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0.5rem;
+}
+
+div.main div.review div.rating img {
+    height: 100%;
+}
+
+div.main div.review p {
+    margin: 20px;
+}
+
+div.main div.review h3 {
+    display: inline-block;
+}
+
+div.main div.review h4 {
+    font-size: 1rem;
+}
+
+*************************************************************************************
+HTML For number of reviews for each rating
+*************************************************************************************
+    <div class="well-display">
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        Average Rating
+      </div>
+
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        1 Star Review
+      </div>
+
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        2 Star Review
+      </div>
+
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        3 Star Review
+      </div>
+
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        4 Star Review
+      </div>
+
+      <div class="well">
+        <span class="amount">
+          <!-- data binding goes here -->
+        </span>
+        5 Star Review
+      </div>
+    </div>
